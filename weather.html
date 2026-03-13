@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Weather Application Dashboard</title>
+
+<link rel="stylesheet" href="weather.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body id="body">
+
+<header>
+
+<h2>☁ Weather Dashboard</h2>
+
+<div class="headerRight">
+
+<span id="clock"></span>
+
+<button onclick="toggleDark()">🌙</button>
+
+</div>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="sidebar">
+
+<h3>Search City</h3>
+
+<input id="cityInput" placeholder="Enter city">
+
+<button onclick="getWeather()">Search</button>
+
+<button onclick="getLocationWeather()">📍 Current Location</button>
+
+<h4>Recent Search</h4>
+
+<ul id="recentList"></ul>
+
+</div>
+
+
+
+<div class="main">
+
+<div class="weatherCard">
+
+<h2 id="cityName"></h2>
+
+<img id="weatherIcon">
+
+<h1 id="temp"></h1>
+
+<p id="desc"></p>
+
+
+<div class="details">
+
+<div>
+<i class="fa-solid fa-droplet"></i>
+Humidity <br>
+<span id="humidity"></span>
+</div>
+
+<div>
+<i class="fa-solid fa-wind"></i>
+Wind <br>
+<span id="wind"></span>
+</div>
+
+<div>
+<i class="fa-solid fa-gauge"></i>
+Pressure <br>
+<span id="pressure"></span>
+</div>
+
+<div>
+<i class="fa-solid fa-temperature-three-quarters"></i>
+Feels Like <br>
+<span id="feels"></span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="rightPanel">
+
+<h3>7 Day Forecast</h3>
+
+<div id="forecast"></div>
+
+<h3>Temperature Graph</h3>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+
+</div>
+
+
+
+<!-- Forecast Details Modal -->
+
+<div id="forecastModal" class="modal">
+
+<div class="modalContent">
+
+<button onclick="closeModal()">⬅ Back</button>
+
+<h2 id="modalDate"></h2>
+
+<img id="modalIcon">
+
+<h1 id="modalTemp"></h1>
+
+<p id="modalDesc"></p>
+
+<p>💧 Humidity : <span id="modalHumidity"></span></p>
+
+<p>🌬 Wind : <span id="modalWind"></span></p>
+
+<p>📊 Pressure : <span id="modalPressure"></span></p>
+
+</div>
+
+</div>
+
+
+
+<script src="weather.js"></script>
+
+</body>
+</html>
